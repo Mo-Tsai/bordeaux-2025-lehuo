@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1A1A2E">
+<title>波爾多 2025 年期酒分析報告｜樂活酒窖</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600;700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:     #1A1A2E;
+    --gold:   #C9A84C;
+    --lt:     #D4B896;
+    --cream:  #E8E0D0;
+    --dim:    #6B4F1A;
+    --card:   #0D0F22;
+    --serif:  'Noto Serif TC', Georgia, serif;
+    --sans:   'Noto Sans TC', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--cream);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.7;
+    min-height: 100dvh;
+  }
+
+  /* ── Layout ── */
+  .page {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0 0 2rem;
+  }
+
+  /* ── Brand bar ── */
+  .brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1.1rem 1.5rem 0.8rem;
+    border-bottom: 1px solid var(--dim);
+  }
+  .brand-name {
+    font-family: var(--serif);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+  }
+  .brand-en {
+    font-family: var(--serif);
+    font-size: 9px;
+    color: var(--dim);
+    letter-spacing: 0.3em;
+    font-weight: 400;
+  }
+  .brand-dot {
+    width: 3px; height: 3px;
+    border-radius: 50%;
+    background: var(--dim);
+  }
+
+  /* ── Slide sections ── */
+  .slide {
+    padding: 1.8rem 1.5rem 0;
+  }
+  .slide + .slide {
+    border-top: 1px solid var(--dim);
+    margin-top: 1.5rem;
+    padding-top: 2rem;
+  }
+
+  /* ── Title block ── */
+  .title-block { text-align: center; margin-bottom: 1.4rem; }
+  .title-main {
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1.3;
+    margin-bottom: 0.3rem;
+  }
+  .title-en {
+    font-family: var(--serif);
+    font-size: 9px;
+    color: var(--lt);
+    letter-spacing: 0.35em;
+    font-weight: 400;
+  }
+
+  /* ── Gold rule ── */
+  .rule-gold {
+    border: none;
+    border-top: 1px solid var(--gold);
+    margin: 1.1rem 0;
+  }
+  .rule-dim {
+    border: none;
+    border-top: 1px solid var(--dim);
+    margin: 1.1rem 0;
+    opacity: 0.6;
+  }
+
+  /* ── Quote ── */
+  .quote-block {
+    text-align: center;
+    padding: 0.2rem 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .quote-en {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14.5px;
+    color: var(--lt);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+  .quote-cn {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 13px;
+    color: var(--lt);
+    margin-bottom: 0.5rem;
+  }
+  .quote-author {
+    font-family: var(--serif);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gold);
+  }
+  .quote-role {
+    font-size: 10px;
+    color: var(--dim);
+    margin-top: 0.2rem;
+    letter-spacing: 0.02em;
+  }
+
+  /* ── Intro / body text ── */
+  .intro {
+    font-size: 13.5px;
+    color: var(--cream);
+    line-height: 1.75;
+    margin-bottom: 0.7rem;
+  }
+  .subtitle-gold {
+    font-family: var(--serif);
+    font-size: 12px;
+    color: var(--gold);
+    font-style: italic;
+    text-align: center;
+    margin: 0.8rem 0;
+  }
+
+  /* ── Section heading ── */
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-bottom: 0.6rem;
+  }
+  .section-bar {
+    width: 4px;
+    border-radius: 2px;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+  }
+  .section-sub {
+    font-family: var(--serif);
+    font-size: 11px;
+    color: var(--gold);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    padding-left: 0.6rem;
+  }
+  .section-body {
+    font-size: 13.5px;
+    color: var(--cream);
+    line-height: 1.78;
+    margin-bottom: 0.3rem;
+  }
+
+  .section-wrap { margin-bottom: 1.2rem; }
+
+  /* ── Wine type blocks ── */
+  .wine-section { margin-bottom: 1.3rem; }
+  .wine-section:last-child { margin-bottom: 0; }
+
+  /* ── Left / Right bank ── */
+  .bank-heading {
+    font-family: var(--serif);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--gold);
+    text-align: center;
+    margin-bottom: 0.9rem;
+  }
+  .bank-conclusion {
+    font-family: var(--serif);
+    font-size: 13px;
+    color: var(--lt);
+    font-style: italic;
+    line-height: 1.7;
+    padding: 0.6rem 0.8rem;
+    border-left: 2px solid var(--gold);
+    margin-top: 0.7rem;
+  }
+
+  /* ── Summary ── */
+  .summary-title {
+    font-family: var(--serif);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 0.55rem;
+  }
+
+  /* ── Tasting note box ── */
+  .tasting-box {
+    background: var(--card);
+    border: 1px solid var(--gold);
+    border-radius: 6px;
+    padding: 1rem 1.1rem;
+    margin-top: 0.5rem;
+  }
+  .tasting-label {
+    font-family: var(--serif);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+  }
+  .tasting-text {
+    font-family: var(--serif);
+    font-size: 13.5px;
+    color: var(--lt);
+    font-style: italic;
+    line-height: 1.75;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    text-align: center;
+    font-size: 9.5px;
+    color: var(--dim);
+    letter-spacing: 0.15em;
+    padding: 1.2rem 1.5rem 0.6rem;
+    border-top: 1px solid var(--dim);
+    margin-top: 1.8rem;
+    opacity: 0.8;
+  }
+
+  /* ── Page nav dots ── */
+  .nav-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 0 0.5rem;
+  }
+  .nav-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--dim);
+    transition: background 0.2s;
+  }
+  .nav-dot.active { background: var(--gold); }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Brand -->
+  <header class="brand">
+    <span class="brand-name">樂活酒窖</span>
+    <span class="brand-dot"></span>
+    <span class="brand-en">LEHUO CAVE</span>
+  </header>
+
+  <!-- ══ SLIDE 1 ══════════════════════════════════ -->
+  <section class="slide">
+
+    <!-- Title -->
+    <div class="title-block">
+      <div class="title-main">波爾多 2025<br>年期酒分析報告</div>
+      <div class="title-en">BORDEAUX 2025 EN PRIMEUR</div>
+    </div>
+
+    <hr class="rule-gold">
+
+    <!-- Quote -->
+    <div class="quote-block">
+      <div class="quote-en">"A 'kissed by the sun'<br>crystal-clear vintage."</div>
+      <div class="quote-cn">「這是一枚被太陽親吻過的水晶。」</div>
+      <div class="quote-author">— Alexandre Ma</div>
+      <div class="quote-role">首位且最年輕入選法國權威雜誌《RVF》品鑑委員會的亞洲酒評人</div>
+    </div>
+
+    <hr class="rule-dim">
+
+    <!-- Intro -->
+    <p class="intro">2025 年的天氣是全球氣候暖化背景下的理想年份。2024 年氣候惡劣，釀酒師精疲力竭，而 2025 年，氣候條件接近完美，為葡萄種植者提供了令人欣喜的喘息機會。</p>
+    <p class="intro">2025 年份延續了「尾數為 5」的優秀年份傳統：從 1955 到 2015，皆為卓越佳釀。2025 年也不例外，再次展現出五星級的優異表現。</p>
+
+    <div class="subtitle-gold">2025 年葡萄生長與採收，氣候整體有利</div>
+
+    <hr class="rule-gold">
+
+    <!-- 白葡萄酒 -->
+    <div class="wine-section">
+      <div class="section-head">
+        <div class="section-bar" style="height:1.3rem"></div>
+        <div class="section-title">白葡萄酒：全面成熟，實屬罕見</div>
+      </div>
+      <p class="section-body">過去，波爾多白酒多半仰賴 Sauvignon Blanc 與 Sémillon 的搭配來取得風味平衡；但今年三大品種—— Sauvignon Blanc、Sémillon 與 Muscadelle——都達到難得的完美成熟。酒體因此兼具濃郁厚實與清新悠長的特質。雖然產量偏低，僅約 15–35 hl/ha，卻正好體現了「量少質精」的年份特色。</p>
+    </div>
+
+    <hr class="rule-dim">
+
+    <!-- 紅葡萄酒 -->
+    <div class="wine-section">
+      <div class="section-head">
+        <div class="section-bar" style="height:1.3rem"></div>
+        <div class="section-title">紅葡萄酒：小而濃縮</div>
+      </div>
+      <p class="section-body">紅葡萄於 7 月中旬至 8 月初進入轉色期，成熟節奏穩定。小果實與厚果皮帶來深邃色澤、豐富花青素與成熟單寧；雖然產量僅約 20–40 hl/ha，但品質集中。初步酒液展現鮮明果香與香料氣息，單寧柔順、口感圓潤，左右岸表現皆相當均衡。8 月份採收前的幾場雨，讓成品酒精度幾乎都落在 13.5% 以下，集中感強卻又不過度濃郁，實屬完美。</p>
+    </div>
+
+    <hr class="rule-dim">
+
+    <!-- 甜酒 -->
+    <div class="wine-section">
+      <div class="section-head">
+        <div class="section-bar" style="height:1.3rem"></div>
+        <div class="section-title">甜酒：貴腐菌提前「報到」</div>
+      </div>
+      <p class="section-body">Sauternes 與 Barsac 今年貴腐菌發展特別早，部分風乾葡萄甚至於 8 月底便開始採收。9 月的炎熱乾燥天氣進一步提升糖分濃縮，使酒精潛力高達 16–22% vol。初步酒液已展現鮮明果乾與蜜餞香氣，顯示 2025 年甜酒極有機會媲美 2010 等頂尖年份。</p>
+    </div>
+
+  </section>
+
+  <!-- ══ SLIDE 2 ══════════════════════════════════ -->
+  <section class="slide">
+
+    <!-- 桶邊試飲 -->
+    <div class="section-wrap">
+      <div class="section-head">
+        <div class="section-bar" style="height:1.3rem"></div>
+        <div class="section-title">桶邊試飲</div>
+      </div>
+      <p class="section-body">新酒不再是桶味掩蓋一切，現在喝就很美味，整體「甜美」、「集中」且極為「清爽」，陳年潛力佳。近年酒莊開始不再執著追逐「大而美」式的滿分，從而展現出更多元的釀造風格——隨著氣候與釀造風格改變，現在新年份無須放上太久就很美味。</p>
+    </div>
+
+    <hr class="rule-gold">
+
+    <!-- 左岸 vs 右岸 -->
+    <div class="section-wrap">
+      <div class="bank-heading">波爾多左岸 vs 右岸</div>
+
+      <div class="section-head">
+        <div class="section-bar" style="height:1.3rem"></div>
+        <div class="section-title">左岸</div>
+      </div>
+      <div class="section-sub">以 Cabernet Sauvignon 為主的產區</div>
+      <p class="section-body">今年表現特別出色。小顆粒、厚果皮的葡萄帶來深色澤、高單寧與強勁結構，酒體集中且具有良好陳年潛力；同時保有成熟黑醋栗、雪松與香料風味，整體風格精準而經典。</p>
+
+      <hr class="rule-dim">
+
+      <div class="section-head">
+        <div class="section-bar" style="height:1.3rem"></div>
+        <div class="section-title">右岸</div>
+      </div>
+      <div class="section-sub">以 Merlot 與 Cabernet Franc 為主的產區</div>
+      <p class="section-body">成熟均衡，酒款展現更柔和圓潤的質地。果味偏向成熟紅黑水果，口感絲滑、單寧細緻，酒體雖不若左岸強勁，但層次與優雅感突出。</p>
+
+      <div class="bank-conclusion">2025 年難得出現左右岸同步高水準的情況：左岸強調結構與深度，右岸展現細膩與平衡，兩者品質都相當亮眼。</div>
+    </div>
+
+    <hr class="rule-gold">
+
+    <!-- 總結 -->
+    <div class="section-wrap">
+      <div class="summary-title">2025 波爾多葡萄酒總結</div>
+      <p class="section-body">2025 年波爾多整體呈現「質高量少」的典型年份特徵。產量結構以紅酒為主（82%），白葡萄品種僅佔 13.3%。全年總產量約 2.906 億升，為自 1991 年以來最低，且已連續第五年減產。近五年平均產量較 2011–2020 年下降 25%，較 2001–2010 年更大幅減少 38%，顯示長期下滑趨勢。</p>
+      <p class="section-body" style="margin-top:0.6rem">減產原因連年不同：2021 年受春霜與黴病影響，2022 年為乾旱高溫，2023 與 2024 年黴病壓力大，而 2025 年則主要來自乾旱與高溫。同時，2024 年開花條件不佳導致 2025 年果串數減少，加上水分壓力使果粒偏小、出汁量低，但風味更為集中。</p>
+      <p class="section-body" style="margin-top:0.6rem">品質方面，白酒清新平衡，紅酒濃郁優雅，甜酒表現奢華，各風土特色鮮明。2025 年，是一個「值得銘記」的年份——不在於產量，而在於質量。</p>
+    </div>
+
+    <hr class="rule-dim">
+
+    <!-- 樂活特派員 -->
+    <div class="tasting-box">
+      <div class="tasting-label">樂活特派員現場品飲 ＆ 推薦說明</div>
+      <p class="tasting-text">此次樂活派出多名特派員至波爾多現場品飲，大家都對品飲結果十分驚豔。高集中感的同時卻又有著適中約 13.5% 的酒精度，鮮活的滋味就像是剛在嘴中咬破葡萄一般，單寧成熟且絲滑。所以這次樂活除了列出酒評家給分之外，也會給出自己的推薦記號，讓大家多一個亞洲味蕾的參考方向。</p>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">禁 止 酒 駕　＊　未 成 年 人 禁 止 飲 酒</footer>
+
+</div>
+</body>
+</html>
