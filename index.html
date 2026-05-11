@@ -281,50 +281,79 @@
   @media print {
     @page {
       size: A4;
-      margin: 1.2cm 1.4cm;
+      margin: 1cm 1.3cm;
     }
+
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
     body {
       background: #fff !important;
       color: #111 !important;
-      font-size: 11pt;
+      font-size: 8pt;
+      line-height: 1.45;
     }
+
     .pdf-btn { display: none !important; }
-    .page { max-width: 100%; }
+    .page { max-width: 100%; padding: 0; }
 
-    .brand { border-bottom: 1px solid #ccc; }
-    .brand-logo { filter: invert(1) brightness(0); height: 28px; }
+    /* Brand */
+    .brand { padding: 0.4rem 0 0.35rem; border-bottom: 0.5pt solid #ccc; }
+    .brand-logo { filter: invert(1) brightness(0); height: 22px; }
 
-    .title-main { color: #5a3a00 !important; }
-    .title-en, .quote-role, .quote-author { color: #7a5c00 !important; }
-    .quote-en, .quote-cn { color: #444 !important; }
+    /* Title */
+    .title-block { margin-bottom: 0.5rem; }
+    .title-main { font-size: 18pt !important; color: #5a3a00 !important; }
+    .title-en   { font-size: 7pt  !important; color: #7a5c00 !important; }
 
-    .rule-gold { border-color: #b8922a !important; }
-    .rule-dim  { border-color: #ccc !important; }
+    /* Rules */
+    .rule-gold { border-color: #b8922a !important; margin: 0.4rem 0; }
+    .rule-dim  { border-color: #ccc    !important; margin: 0.35rem 0; opacity: 1; }
 
-    .section-bar { background: #b8922a !important; }
-    .section-title { color: #222 !important; }
-    .section-body, .intro, p { color: #222 !important; }
-    .section-sub { color: #7a5c00 !important; }
+    /* Quote */
+    .quote-block { padding: 0 0.3rem; margin-bottom: 0.4rem; }
+    .quote-en    { font-size: 8.5pt !important; color: #444 !important; }
+    .quote-cn    { font-size: 8pt   !important; color: #444 !important; }
+    .quote-author{ font-size: 8pt   !important; color: #7a5c00 !important; }
+    .quote-role  { font-size: 7pt   !important; color: #888 !important; }
 
-    .bank-heading { color: #5a3a00 !important; }
-    .bank-conclusion { color: #444 !important; border-color: #b8922a !important; }
+    /* Intro */
+    .intro { font-size: 8pt !important; line-height: 1.45; margin-bottom: 0.3rem; color: #222 !important; }
+    .subtitle-gold { font-size: 7.5pt !important; color: #7a5c00 !important; margin: 0.3rem 0; }
 
-    .summary-title { color: #5a3a00 !important; }
+    /* Sections */
+    .section-head  { gap: 0.3rem; margin-bottom: 0.25rem; }
+    .section-bar   { background: #b8922a !important; width: 3px !important; }
+    .section-title { font-size: 9pt !important; color: #222 !important; }
+    .section-sub   { font-size: 7pt !important; color: #7a5c00 !important; margin-bottom: 0.2rem; }
+    .section-body  { font-size: 8pt !important; line-height: 1.45; color: #222 !important; }
+    .section-wrap  { margin-bottom: 0.5rem; }
+    .wine-section  { margin-bottom: 0.5rem; }
 
-    .tasting-box {
-      background: #fdf8f0 !important;
-      border-color: #b8922a !important;
-    }
-    .tasting-label { color: #7a5c00 !important; }
-    .tasting-text  { color: #333 !important; }
+    /* Left/Right bank */
+    .bank-heading    { font-size: 10pt !important; color: #5a3a00 !important; margin-bottom: 0.4rem; }
+    .bank-conclusion { font-size: 7.5pt !important; color: #444 !important; border-color: #b8922a !important; padding: 0.3rem 0.5rem; margin-top: 0.3rem; }
 
+    /* Summary */
+    .summary-title { font-size: 9pt !important; color: #5a3a00 !important; margin-bottom: 0.25rem; }
+
+    /* Tasting box */
+    .tasting-box   { background: #fdf8f0 !important; border-color: #b8922a !important; padding: 0.5rem 0.6rem; margin-top: 0.3rem; }
+    .tasting-label { font-size: 7.5pt !important; color: #7a5c00 !important; margin-bottom: 0.25rem; }
+    .tasting-text  { font-size: 8pt   !important; color: #333 !important; line-height: 1.45; }
+
+    /* Footer */
+    .footer { font-size: 7pt !important; color: #aaa !important; border-color: #ddd !important;
+              padding: 0.4rem 0 0.2rem; margin-top: 0.6rem; }
+
+    /* Slide sections */
+    .slide { padding: 0.5rem 0 0; }
     .slide + .slide {
-      border-top: 1px solid #ddd;
+      border-top: none;
+      margin-top: 0;
+      padding-top: 0.5rem;
       page-break-before: always;
+      break-before: page;
     }
-
-    .subtitle-gold { color: #7a5c00 !important; }
-    .footer { color: #999 !important; border-color: #ddd !important; }
   }
 </style>
 </head>
