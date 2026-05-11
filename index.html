@@ -251,20 +251,81 @@
     opacity: 0.8;
   }
 
-  /* ── Page nav dots ── */
-  .nav-dots {
+  /* ── PDF button ── */
+  .pdf-btn {
+    position: fixed;
+    bottom: 1.4rem;
+    right: 1.2rem;
     display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 1rem 0 0.5rem;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--gold);
+    color: #1A1A2E;
+    font-family: var(--serif);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+    text-decoration: none;
+    z-index: 100;
+    transition: opacity 0.2s;
   }
-  .nav-dot {
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: var(--dim);
-    transition: background 0.2s;
+  .pdf-btn:hover { opacity: 0.88; }
+  .pdf-btn svg { flex-shrink: 0; }
+
+  /* ── Print / PDF styles ── */
+  @media print {
+    @page {
+      size: A4;
+      margin: 1.2cm 1.4cm;
+    }
+    body {
+      background: #fff !important;
+      color: #111 !important;
+      font-size: 11pt;
+    }
+    .pdf-btn { display: none !important; }
+    .page { max-width: 100%; }
+
+    .brand { border-bottom: 1px solid #ccc; }
+    .brand-logo { filter: invert(1) brightness(0); height: 28px; }
+
+    .title-main { color: #5a3a00 !important; }
+    .title-en, .quote-role, .quote-author { color: #7a5c00 !important; }
+    .quote-en, .quote-cn { color: #444 !important; }
+
+    .rule-gold { border-color: #b8922a !important; }
+    .rule-dim  { border-color: #ccc !important; }
+
+    .section-bar { background: #b8922a !important; }
+    .section-title { color: #222 !important; }
+    .section-body, .intro, p { color: #222 !important; }
+    .section-sub { color: #7a5c00 !important; }
+
+    .bank-heading { color: #5a3a00 !important; }
+    .bank-conclusion { color: #444 !important; border-color: #b8922a !important; }
+
+    .summary-title { color: #5a3a00 !important; }
+
+    .tasting-box {
+      background: #fdf8f0 !important;
+      border-color: #b8922a !important;
+    }
+    .tasting-label { color: #7a5c00 !important; }
+    .tasting-text  { color: #333 !important; }
+
+    .slide + .slide {
+      border-top: 1px solid #ddd;
+      page-break-before: always;
+    }
+
+    .subtitle-gold { color: #7a5c00 !important; }
+    .footer { color: #999 !important; border-color: #ddd !important; }
   }
-  .nav-dot.active { background: var(--gold); }
 </style>
 </head>
 <body>
@@ -398,5 +459,14 @@
   <footer class="footer">禁 止 酒 駕　＊　未 成 年 人 禁 止 飲 酒</footer>
 
 </div>
+
+<!-- PDF download button -->
+<button class="pdf-btn" onclick="window.print()">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 15V3m0 12-4-4m4 4 4-4"/><rect x="2" y="17" width="20" height="4" rx="1"/>
+  </svg>
+  下載 PDF
+</button>
+
 </body>
 </html>
